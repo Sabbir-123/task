@@ -23,7 +23,8 @@ const SignUp = () => {
   const location = useLocation()
   const from = location.state?.from?.pathname || '/'
 
-  
+ // email Singup
+     
     const handleSignUp = (data) => {
         console.log(data);
         setSignUPError('');
@@ -43,30 +44,12 @@ const SignUp = () => {
                 setSignUPError(error.message)
             });
     }
-
-    // const savedUser =(name ,email, role)=>{
-    //     const user = {name, email, role};
-    //     // fetch('https://server-assignment-12.vercel.app/usersall', 
-    //     // {
-    //     //     method: 'POST',
-    //     //     headers: {
-    //     //         'content-type':'application/json'
-    //     //     },
-    //     //     body: JSON.stringify(user)
-    //     // }
-    //     // )
-    //     // .then(res=>res.json())
-    //     // .then(data=> {
-    //     //     console.log(data);
-    //     //     setCratedUseremail(email)
-    //     // })
-    // }
-  
+// Google SingIn
     
     const handleGoogleSignin = () => {
             signinGoogle().then(result => {
               console.log(result.user)
-            //   setAuthToken(result.user)
+            swal('User Created Successfully.')
               setLoading(false)
               navigate(from, { replace: true })
             })
@@ -80,21 +63,21 @@ const SignUp = () => {
                 <h2 className='text-xl text-center'>Sign Up</h2>
                 <form onSubmit={handleSubmit(handleSignUp)}>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Name</span></label>
+                        <label className="label"> <span className="label-text text-black">Name</span></label>
                         <input type="text" {...register("name", {
                             required: "Name is Required"
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.name && <p className='text-red-500'>{errors.name.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Email</span></label>
+                        <label className="label"> <span className="label-text text-black ">Email</span></label>
                         <input type="email" {...register("email", {
                             required: true
                         })} className="input input-bordered w-full max-w-xs" />
                         {errors.email && <p className='text-red-500'>{errors.email.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
-                        <label className="label"> <span className="label-text">Password</span></label>
+                        <label className="label"> <span className="label-text text-black">Password</span></label>
                         <input type="password" {...register("password", {
                             required: "Password is required",
                             minLength: { value: 6, message: "Password must be 6 characters long" },
@@ -102,19 +85,19 @@ const SignUp = () => {
                         {errors.password && <p className='text-red-500'>{errors.password.message}</p>}
                     </div>
                     <div className="form-control w-full max-w-xs">
-                    <label className="label"> <span className="label-text">Are You a Admin or a User?</span></label>
+                    <label className="label"> <span className="label-text text-black">Are You a Admin or a User?</span></label>
                     <select className="input input-bordered w-full max-w-xs"  {...register("role")}>
    
                     <option  value="Admin">Admin</option>
                       <option value="User">User</option>
                      </select>
                     </div>
-                    <input className='btn btn-accent w-full mt-4' value="Sign Up" type="submit" />
+                    <input className='btn btn-accent  w-full mt-4' value="Sign Up" type="submit" />
                     {signUpError && <p className='text-red-600'>{signUpError}</p>}
                 </form>
-                <p>Already have an account <Link className='text-secondary' to="/login">Please Login</Link></p>
+                <p className='text-black'>Already have an account <Link className=' text-blue-500' to="/login">Please Login</Link></p>
                 <div className="divider">OR</div>
-                <button onClick={handleGoogleSignin} className='btn btn-outline w-full'>CONTINUE WITH GOOGLE</button>
+                <button onClick={handleGoogleSignin} className='btn text-black btn-outline w-full'>CONTINUE WITH GOOGLE</button>
 
             </div>
         </div>

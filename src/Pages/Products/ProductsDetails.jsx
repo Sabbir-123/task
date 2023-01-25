@@ -9,7 +9,7 @@ const ProductsDetails = ({ singleProduct }) => {
     return (
         <div>
       <div>
-        <div className="w-full h-[550px] max-w-sm overflow-hidden bg-white rounded-lg shadow-lg shadow-slate-900 lg:m-8 m-3">
+        <div className="w-full h-[600px] max-w-sm overflow-hidden bg-white rounded-lg shadow-lg shadow-slate-900 lg:m-8 m-3">
        <div className='p-2'>
        <div className="relative">
       <img src={image} alt="imag" className="object-cover object-center w-56 h-56" />

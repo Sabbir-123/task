@@ -22,7 +22,7 @@ const router = createBrowserRouter ([{
     },
         {
         path: '/products',
-        element: <PrivateRoute></PrivateRoute>
+        element: <PrivateRoute><Products></Products></PrivateRoute>
     },
         {
         path: '/login',

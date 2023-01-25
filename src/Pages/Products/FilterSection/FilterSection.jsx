@@ -25,7 +25,7 @@ const FilterSection = ({ products, filterValueSelected }) => {
 
   console.log(filteredProducts);
   return (
-    <div>
+    <div className="whiteColor">
         <div className="flex bg-gray-300 justify-between px-10 py-2">
       <div>
         <select

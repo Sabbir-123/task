@@ -40,7 +40,7 @@ const Navbar = () => {
       );
     return (
         <div>
-            <div className="navbar whiteColor  flex justify-between">
+            <div className="navbar whiteColor text-black flex justify-between">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
