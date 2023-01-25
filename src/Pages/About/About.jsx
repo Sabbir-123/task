@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import ME from '../../Asstes/ME.png'
 
 const About = () => {
+    document.title= "About";
     return (
         <div className="flex items-center h-screen bg-gray-200">
       <div className="w-full text-center">

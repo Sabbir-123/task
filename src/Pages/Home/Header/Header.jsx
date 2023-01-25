@@ -1,7 +1,7 @@
 import SignUp from "../../Shared/SignUp/Signup";
 
 export const Header = () => {
-    
+
     return (
       <div className="relative ">
         <img

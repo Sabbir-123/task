@@ -4,6 +4,7 @@ import FilterSection from './FilterSection/FilterSection';
 import ProductsDetails from './ProductsDetails';
 
 const Products = () => {
+    document.title= "Products";
     const {data: products = [], refetch}= useQuery({
         queryKey: ['products'],
         queryFn: async()=>{

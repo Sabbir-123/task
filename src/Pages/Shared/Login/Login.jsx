@@ -9,6 +9,7 @@ import { AuthContext } from '../../../Context/AuthProvider';
 
 
 const Login = () => {
+    document.title= "LogIn";
   const { register, formState: { errors }, handleSubmit } = useForm();
   const { signIn,signinGoogle, user } = useContext(AuthContext);
   const [loginError, setLoginError] = useState('');
