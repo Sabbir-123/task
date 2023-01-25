@@ -14,23 +14,11 @@ const Products = () => {
     })
 
     return (
-      <div className='flex'>
-         <div>
-<FilterSection products={products}></FilterSection>
+      <div >
+         <div className='grid'>
+<FilterSection products={products} ></FilterSection>
         </div>
-          <div className="grid grid-cols-1 m-5 lg:grid-cols-3 md:grid-cols-2 gap-5">
-        {products.map((singleProduct, i) => (
-          <ProductsDetails
-            key={i}
-            singleProduct={singleProduct}
-            
-          >
-            {" "}
-          </ProductsDetails >
-        ))}
-  
-        
-      </div>
+          
      
       </div>
     );

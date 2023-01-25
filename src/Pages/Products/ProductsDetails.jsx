@@ -27,7 +27,7 @@ const ProductsDetails = ({ singleProduct }) => {
 
           <div className="px-6 py-4">
             <h1 className="text-xl font-semibold  text-black">
-              Price: {price}
+              Price: {price} $
             </h1>
 
             <div className="py-2  text-gray-400">{showFullDescription ? description : shortDescription} <button className="text-blue-500" onClick={() => setShowFullDescription(!showFullDescription)}>
